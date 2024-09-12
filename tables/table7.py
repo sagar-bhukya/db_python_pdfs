@@ -3,7 +3,7 @@ from reportlab.lib import colors
 from pdf_utils import create_table
 from reportlab.lib.pagesizes import A4
 
-def get_table7_data():
+def get_table7_data(record):
     return [
     ["","","One-time/R\necurring","Amount(in ) or Percenta\nge(%) as applicable","One-time/R\necurring","Amount(in ) or Percenta\nge(%) as applicable"],
     ["(i)","Processing fees","","","",""],
@@ -43,8 +43,8 @@ def get_table7_style():
         
 ]))
 
-def draw_table7(c, x, y):
-    data = get_table7_data()
+def draw_table7(c,record, x, y):
+    data = get_table7_data(record)
     col_widths = [30,210,50,100,50,100]
     row_heights = [25,14,14,14,14,14,14,14,14,14,14,14,14]
     table = create_table(data, col_widths, row_heights, get_table7_style())

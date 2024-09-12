@@ -24,7 +24,7 @@ from pdf_utils import create_table, get_default_table_style
 
 def get_table_data(record):
     return [
-        ["Group ID", record['Loan_ID'], "Group Name:", record['MGI_Id']],
+        ["Group ID", record['Loan_ID'], "Group Name", record['MGI_Id']],
         ["Branch Name (Branch ID)", record['MGI_Id'], "Mobile number", record['Mobile Number']],
         ["Borrower ID", record['MBRI_ID'], "Village/Center Name", record["Client's Village's Name"]],
         ["Borrower Name", record["Client's Name"], "F/G/H Name", record["Client's Guardian's Name"]]

@@ -3,7 +3,7 @@ from reportlab.lib import colors
 from pdf_utils import create_table
 from reportlab.lib.pagesizes import A4
 
-def get_table5_data():
+def get_table5_data(record):
     return [
     ["ReferenceBench\nmark","Benchmarkrate\n%","Spread\n%","Finalrate(%)R=(B)+\n(S)","Resetperiodicity\n   (M)","","impact of change in the referencebenchmark(For 25bps change \nin R,change in)",""],
     ["","","","","B","S","EPI","No.of EPIs"],
@@ -26,8 +26,8 @@ def get_table5_style():
 
 ]))
 
-def draw_table5(c, x, y):
-    data = get_table5_data()
+def draw_table5(c,record, x, y):
+    data = get_table5_data(record)
     col_widths = [63.75,63.75,35,63.75,31.875,31.875,100,150]
     row_heights = [25,14,14]
     table = create_table(data, col_widths, row_heights, get_table5_style())

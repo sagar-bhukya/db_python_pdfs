@@ -3,7 +3,7 @@ from reportlab.lib import colors
 from pdf_utils import create_table
 from reportlab.lib.pagesizes import A4
 
-def get_table4_data():
+def get_table4_data(record):
     return [
     ["6","Interestrate(6) andtype(fixedorloatingorhybrid) ","",""],
     ["7","lnformationincaseofFloatingrateofinterest","",""]
@@ -19,8 +19,8 @@ def get_table4_style():
         ('SPAN',(2,1),(3,1))
 ]))
 
-def draw_table4(c, x, y):
-    data = get_table4_data()
+def draw_table4(c, record,x, y):
+    data = get_table4_data(record)
     col_widths = [70,200,90,180]
     row_heights = [14,14]
     table = create_table(data, col_widths, row_heights, get_table4_style())

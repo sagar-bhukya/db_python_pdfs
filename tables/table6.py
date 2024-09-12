@@ -3,7 +3,7 @@ from reportlab.lib import colors
 from pdf_utils import create_table
 from reportlab.lib.pagesizes import A4
 
-def get_table6_data():
+def get_table6_data(record):
     return [
     ["8","Fee/Charges","",""],
     ["","","Payable to the RE(A)","Payable to a third partv through RE (B)"]
@@ -22,8 +22,8 @@ def get_table6_style():
 
 ]))
 
-def draw_table6(c, x, y):
-    data = get_table6_data()
+def draw_table6(c,record, x, y):
+    data = get_table6_data(record)
     col_widths = [75,75,220,170]
     row_heights = [14,14]
     table = create_table(data, col_widths, row_heights, get_table6_style())
