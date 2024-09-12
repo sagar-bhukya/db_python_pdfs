@@ -25,5 +25,17 @@ def fetch_data_from_db(query):
         # print(result)
         cursor.close()
         return data
-query1="SELECT * FROM temp_py"
-fetch_data_from_db(query1)
+# query1="SELECT * FROM temp_py"
+# fetch_data_from_db(query1)
+
+def execute_procedure(procedure, params=None):
+    """
+    Helper function to execute a stored procedure.
+    """
+    connection=get_db_connection()
+    cursor=connection.cursor()
+    query = f"EXEC {procedure}"
+    if params:
+        query += f" {params}"
+    cursor.execute(query)
+    connection.commit()

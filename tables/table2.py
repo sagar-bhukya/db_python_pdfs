@@ -5,7 +5,7 @@ from reportlab.lib.pagesizes import A4
 
 def get_table2_data(record):
     return [
-        ["1", "Loan Application Number", " ", "Type of Loan", " "],
+        ["1", "Loan Application Number", record['Loan_ID'], "Type of Loan", " "],
         ["2", "Sanctioned Loan Amount (in Rupees)", " "],
         ["3", "Disbursal Schedule", ""],
         ["4", "Loan term (years/months/days)", " "],
