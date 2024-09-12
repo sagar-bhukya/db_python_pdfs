@@ -1,0 +1,52 @@
+from reportlab.platypus import Table, TableStyle
+from reportlab.lib import colors
+from pdf_utils import create_table
+from reportlab.lib.pagesizes import A4
+
+def get_table7_data():
+    return [
+    ["","","One-time/R\necurring","Amount(in ) or Percenta\nge(%) as applicable","One-time/R\necurring","Amount(in ) or Percenta\nge(%) as applicable"],
+    ["(i)","Processing fees","","","",""],
+    ["(ii)","Ingurance charges","","","",""],
+    ["(iii)","Spouse Insurance charges (Optional) ","","","",""],
+    ["(iv)","Valuation fees","","","",""],
+    ["(v)","Anyother(pleasespecify)","","","",""],
+    ["9","IAnnualPercentage","","","",""],
+    ["10","Dei3oiConngent harGIRODAmppiable)","","","",""],
+    ["(i)"," Penalcharges ifanyncaseofdelaedpaymen","","","",""],
+    ["(ii)","Othernenalcharzes","","","",""],
+    ["(iii)","oredoaTrecharge ifanniicable ","","","",""],
+    ["(iv)","hargesforswitching ofloansfromflcatingtofixed rateandvicerersa","","","",""],
+    ["(v)","Anyothercharges(pleasespecify) ","","","",""],
+
+]
+
+def get_table7_style():
+    return (TableStyle([
+        ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+        ('VALIGN',(0,0),(-1,-1),'MIDDLE'),#its set the middle of all data
+        ('FONTNAME', (0, 0), (-1, 0), 'Helvetica'),
+        ('FONTSIZE', (0, 0), (-1, -1), 8),
+        ('GRID', (0, 0), (-1, -1), 1, colors.black),
+        ('SPAN',(2,6),(5,6)),
+        ('SPAN',(1,7),(5,7)),
+        ('SPAN',(1,8),(3,8)),
+        ('SPAN',(1,9),(3,9)),
+        ('SPAN',(1,10),(3,10)),
+        ('SPAN',(1,11),(3,11)),
+        ('SPAN',(1,12),(3,12)),
+        ('SPAN',(4,8),(5,8)),
+        ('SPAN',(4,9),(5,9)),
+        ('SPAN',(4,10),(5,10)),
+        ('SPAN',(4,11),(5,11)),
+        ('SPAN',(4,12),(5,12)),
+        
+]))
+
+def draw_table7(c, x, y):
+    data = get_table7_data()
+    col_widths = [30,210,50,100,50,100]
+    row_heights = [25,14,14,14,14,14,14,14,14,14,14,14,14]
+    table = create_table(data, col_widths, row_heights, get_table7_style())
+    table.wrapOn(c, *A4)
+    table.drawOn(c, x, y)

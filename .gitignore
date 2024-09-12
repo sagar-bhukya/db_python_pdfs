@@ -1,0 +1,4 @@
+*.pdf
+mven
+__pycache__
+sample_data.py
