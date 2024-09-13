@@ -5,8 +5,8 @@ from reportlab.lib.pagesizes import A4
 
 def get_table5_data(record):
     return [
-    ["ReferenceBench\nmark","Benchmarkrate\n%","Spread\n%","Finalrate(%)R=(B)+\n(S)","Resetperiodicity\n   (M)","","impact of change in the referencebenchmark(For 25bps change \nin R,change in)",""],
-    ["","","","","B","S","EPI","No.of EPIs"],
+    ["Reference\nBenchmark","Benchmark\nrate (%) (B) ","Spread\n(%) (S)","Final rate (%)R =\n(B) + (S)","Reset\nperiodicity\nmoths","","Impact of change in the referencebenchmark\n(For 25 bps change in ‘R’, change in:)",""],
+    ["","","","","B","S","EPI(₹)","No.of EPIs"],
     ["","","","","","","",""]
 ]
 

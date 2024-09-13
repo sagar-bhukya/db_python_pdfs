@@ -5,8 +5,8 @@ from reportlab.lib.pagesizes import A4
 
 def get_table4_data(record):
     return [
-    ["6","Interestrate(6) andtype(fixedorloatingorhybrid) ","",""],
-    ["7","lnformationincaseofFloatingrateofinterest","",""]
+    ["6","Interest rate (%) and type (fixed or floating or hybrid)","",""],
+    ["7","Additional Information in case of Floating rate of interest","",""]
 ]
 
 def get_table4_style():

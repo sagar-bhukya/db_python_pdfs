@@ -5,19 +5,19 @@ from reportlab.lib.pagesizes import A4
 
 def get_table7_data(record):
     return [
-    ["","","One-time/R\necurring","Amount(in ) or Percenta\nge(%) as applicable","One-time/R\necurring","Amount(in ) or Percenta\nge(%) as applicable"],
-    ["(i)","Processing fees","","","",""],
+    ["","","One-time\nRecurring","Amount(in ) or Percenta\nge(%) as applicable","One-time/R\necurring","Amount(in ) or Percenta\nge(%) as applicable"],
+    ["(i)","Insurance charges","","","",""],
     ["(ii)","Ingurance charges","","","",""],
     ["(iii)","Spouse Insurance charges (Optional) ","","","",""],
     ["(iv)","Valuation fees","","","",""],
-    ["(v)","Anyother(pleasespecify)","","","",""],
-    ["9","IAnnualPercentage","","","",""],
-    ["10","Dei3oiConngent harGIRODAmppiable)","","","",""],
-    ["(i)"," Penalcharges ifanyncaseofdelaedpaymen","","","",""],
-    ["(ii)","Othernenalcharzes","","","",""],
-    ["(iii)","oredoaTrecharge ifanniicable ","","","",""],
-    ["(iv)","hargesforswitching ofloansfromflcatingtofixed rateandvicerersa","","","",""],
-    ["(v)","Anyothercharges(pleasespecify) ","","","",""],
+    ["(v)","Any other (please specify)","","","",""],
+    ["9","Annual Percentage Rate (APR) (%)","","","",""],
+    ["10","Details of Contingent Charges (in ₹ or %, as applicable)","","","",""],
+    ["(i)","Penal charges, if any, in case of delayed payment","","","",""],
+    ["(ii)","Other penal charges, if any","","","",""],
+    ["(iii)","Foreclosure charges, if applicable","","","",""],
+    ["(iv)","Charges for switching of loans from floating to fixed rate and vice versa","","","",""],
+    ["(v)","Any other charges (please specify)","","","",""],
 
 ]
 

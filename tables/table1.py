@@ -35,7 +35,7 @@ def get_table_style():
 
 def draw_table(c, record, x, y):
     data = get_table_data(record)
-    col_widths = [135, 180, 135, 135]
+    col_widths = [135, 135, 135, 135]
     row_heights = [14,14,14,14]
     table = create_table(data, col_widths, row_heights, get_table_style())
     table.wrapOn(c, *A4)

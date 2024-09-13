@@ -2,7 +2,7 @@ from pdf_utils import create_table, get_default_table_style
 from reportlab.lib.pagesizes import A4
 def get_table3_data(record):
     return [
-    ["Trpeofinstalment","AumberoiEPIS","EPIE","commencem entof repayment, postsanction"],
+    ["Type of instalments","Number of EPIs","EPI (₹) ","Commencement of repayment, post sanction"],
     ["","","",""]
 ]
 

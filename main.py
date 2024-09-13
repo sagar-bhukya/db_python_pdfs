@@ -152,10 +152,11 @@ def generate_pdfs(mlai_id, branch_id, record, temp_py_schedule_data):
     """
     Function to generate a PDF for a single record.
     """
-    print(temp_py_schedule_data)
+    # print(temp_py_schedule_data)
     print("--------------")
     filename = f"{branch_id}_{mlai_id}.pdf"
     c, width, height = create_canvas(filename)
+    # print(height,"HHHHHHHHHHHHHHHHHHHHH--------")
     add_logo(c, "sagar_logo.jpeg", x=30, y=height - 50)
     draw_centered_text(c, "LOAN CARD FACTSHEET", height - 60, width)
 
@@ -175,15 +176,16 @@ def generate_pdfs(mlai_id, branch_id, record, temp_py_schedule_data):
     # Finish first page and add a new page
     c.showPage()
 
+    draw_table8(c,30,height-60)
     # # Draw table9 with temp_py_schedule_data on the new page
     # draw_table9(c, temp_py_schedule_data, 30, height - 500)
 
     # Set positions for left and right tables
     x_left = 30  # Left table starting position
-    x_right = 300  # Right table starting position (adjust for spacing)
+    x_right = 305  # Right table starting position (adjust for spacing)
     
     # Pass all required arguments, including x_right and y
-    draw_table9(c, temp_py_schedule_data, x_left, x_right, y=height - 500)
+    draw_table9(c, temp_py_schedule_data, x_left, x_right, y=541)
 
     # Save PDF
     c.save()
