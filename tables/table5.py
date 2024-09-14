@@ -15,7 +15,7 @@ def get_table5_style():
         ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
         ('VALIGN',(0,0),(-1,-1),'MIDDLE'),#its set the middle of all data
         ('FONTNAME', (0, 0), (-1, 0), 'Helvetica'),
-        ('FONTSIZE', (0, 0), (-1, -1), 8),
+        ('FONTSIZE', (0, 0), (-1, -1), 7),
         ('GRID', (0, 0), (-1, -1), 1, colors.black),
         ('SPAN',(0,0),(0,1)),
         ('SPAN',(1,0),(1,1)),
@@ -23,6 +23,7 @@ def get_table5_style():
         ('SPAN',(3,0),(3,1)),
         ('SPAN',(4,0),(5,0)),
         ('SPAN',(6,0),(7,0)),
+        ('LEADING', (0, 0), (-1, -1),7), # for line spacing
 
 ]))
 

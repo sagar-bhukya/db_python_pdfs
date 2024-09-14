@@ -2,12 +2,14 @@ from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 from reportlab.platypus import Table, TableStyle
 from reportlab.lib import colors
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.lib.styles import ParagraphStyle
 
 def create_canvas(filename):
     width, height = A4
     return canvas.Canvas(filename, pagesize=A4), width, height
 
-def add_logo(c, logo_path, x, y, width=70, height=30):
+def add_logo(c, logo_path, x, y, width=90, height=20):
     c.drawImage(logo_path, x=x, y=y, width=width, height=height)
 
 def draw_centered_text(c, text, y_position, page_width, font="Helvetica-Bold", font_size=12):
@@ -38,7 +40,22 @@ def get_default_table_style():
     ])
 
 
+# Function to return a custom paragraph style
+# Function to get custom paragraph style
+def get_custom_paragraph_style():
+    styles = getSampleStyleSheet()
+    custom_style = styles["Normal"]
+    custom_style.fontName = "Helvetica"
+    custom_style.fontSize = 5.5  # Set the font size
+    custom_style.leading = 7  # Set line spacing (leading)
+    custom_style.underline = True  # Set underline
+    custom_style.align="TOP"
+    custom_style.alignment = 0  # Left alignment
+    # custom_style.leftIndent = 0  # Remove any left indent
+    custom_style.spaceBefore = 0  # No space before paragraph
+    # custom_style.spaceAfter = 0   # No space after paragraph
 
+    return custom_style
 
 
 
